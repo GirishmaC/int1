@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview-1</title>
+</head>
+<body>
+    <h3>What is Node.js?</h3>
+    <p>Node.js is an open source and cross-platform runtime environment for executing JavaScript code outside of a browser.</p>
+<p>Node.js is a platform for building the i/o applications which are server-side event-driven and made using JavaScript. It is used to build server-side, input-output, event-driven apps. It is built on Google’s V8 engine.</p>
+<h3>What is NPM?</h3>
+<p>1.NPM stands for the node package manager, npm is used for node dependency management.</p>
+<p>2.NPM gets installed with NodeJs installation. NPM uses nested dependencies, so we can use different versions of any module in our code</p>
+<p>3.NPM :NPM generates a `package-lock.json` file. the package-lock will generate the same node_modules folder for different npm versions</p>
+<p>4.It is a package manager for the JavaScript programming language.</p>
+<h3>What are the modules in Node.js?</h3>
+<p>In Node.js, Modules are the blocks of encapsulated code that communicate with an external application on the basis of their related functionality.</p>
+<p>Modules can be a single file or a collection of multiples files/folders.</p>
+<p>Modules are of three types:
+    <ol type="1">
+        	<li>Core Modules/Internal modules</li>
+           <li>Local Modules/Custom modules</li>
+            <li>Third-party Modules</li></ol></p>
+            <h3>Difference between default export and named export?</h3>
+            <p>Export objects, functions, variables from the module so they can be used by other programs with the help of the import statements. 
+There are two types of exports. 
+          1. Named Exports,
+          2. Default Exports. 
+Named Exports: Named exports are useful to export several values. 
+During the import, it is mandatory to use the same name of the corresponding object.
+Named exports allow us to share multiple objects, functions or variables from a single file and were introduced with the release of ES2015.
+ Named exports are imported with curly braces in various files and must be imported using the name of the object, function or variable that was exported. 
+<pre>
+ //Exporting individual features:
+ export var name1 = …, name2 = …, …, nameN; // also let, const
+// Export list :
+export { name1, name2, …, nameN };
+//Exporting everything at once :
+export { object, number, x, y, boolean, string }
+// Renaming exports:
+ export { variable1 as name1, variable2 as name2, …, nameN };
+// export features declared earlier:
+ export { myFunction, myVariable };
+</pre>
+
+Default Exports: Default exports are useful to export only a single object, function, variable. During the import, we can use any name to import.Exports without a default tag are Named exports. Exports with the default tag are Default exports.
+default export:- Using Named and Default Exports at the same time: It is possible to use Named and Default exports in the same file. It means both will be imported in the same file. Example: javascript.
+<pre>
+function defau(req,res){
+    res.send("default exports")
+}
+function named(req,res) {
+    res.send('named exports')
+}
+
+module.exports = default;//default export
+module.exports = {named};//named export
+</pre>
+    </p>
+    <h3>How do you import any module in Node.js?</h3>
+    <p>Importing functions or modules enhances the reusability of code.</p>
+    <p>Importing a Module: We need to import the module to use the functions defined in the imported module in another file. The result returned by require() is stored in a variable which is used to invoke the functions using the dot notation.</p>
+<pre>const f = require('./func')</pre>
+</body>
+</html>
